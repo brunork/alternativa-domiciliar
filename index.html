@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hospedagem Alternativa · Demo Alienhub</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%231F5F63'/%3E%3Ccircle cx='27' cy='13' r='4.2' fill='%23F2B595'/%3E%3Cpath d='M8 22.5 20 12l12 10.5M12.5 21v8.5h15V21' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5 33.5c3.5-3 6-3 9.5 0s6 3 9.5 0 6-3 11 0' fill='none' stroke='%23F2B595' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -276,7 +277,7 @@ footer.ft .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wr
 .adm{display:grid;grid-template-columns:240px 1fr;min-height:100vh}
 .side{background:var(--ink);color:#fff;padding:22px 16px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column}
 .side .logo small{color:rgba(255,255,255,.5)}
-.side .logo-mark{background:var(--terra)}
+.side .logo svg{--lg-bg:var(--terra)}
 .side nav{margin-top:34px;display:grid;gap:4px}
 .side nav button{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:12px;font-size:14px;color:rgba(255,255,255,.7);text-align:left}
 .side nav button:hover{background:rgba(255,255,255,.06);color:#fff}
@@ -359,14 +360,15 @@ tr:hover td{background:#FBFBF8}
 <body>
 
 <!-- ================= SITE ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logo-mark" viewBox="0 0 40 40"><rect width="40" height="40" rx="12" style="fill:var(--lg-bg,var(--sea))"/><circle cx="27" cy="13" r="4.2" fill="#F2B595"/><path d="M8 22.5 20 12l12 10.5" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 21v8.5h15V21" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 33.5c3.5-3 6-3 9.5 0s6 3 9.5 0 6-3 11 0" fill="none" stroke="#F2B595" stroke-width="2.2" stroke-linecap="round"/></symbol></svg>
 <div id="v-site" class="view">
   <header class="nav" id="nav">
     <div class="wrap">
-      <div class="logo"><div class="logo-mark">A</div><div><b>Alternativa</b><small>Hospedagem domiciliar · BC</small></div></div>
+      <div class="logo"><svg viewBox="0 0 40 40" width="38" height="38" aria-hidden="true"><use href="#logo-mark"/></svg><div><b>Alternativa</b><small>Hospedagem domiciliar · BC</small></div></div>
       <nav class="nav-links">
         <button data-go="casa">A casa</button><button data-go="quartos">Quartos</button><button data-go="noemi">Sua anfitriã</button><button data-go="avaliacoes">Avaliações</button><button data-go="local">Localização</button>
       </nav>
-      <button class="btn btn-p btn-sm" data-route="reservar">Reservar agora</button>
+      <button class="btn btn-p btn-sm" data-book>Reservar agora</button>
     </div>
   </header>
 
@@ -449,7 +451,6 @@ tr:hover td{background:#FBFBF8}
         <div class="ph img rv" data-label="Vista do bondinho" style="background-image:url(img/vista-bondinho.jpg)"></div>
         <div class="ph img rv" data-label="Sala" style="background-image:url(img/sala-2.jpg)"></div>
       </div>
-      </div>
     </div>
   </section>
 
@@ -520,7 +521,7 @@ tr:hover td{background:#FBFBF8}
           <span class="eyebrow" style="color:#F2B595">Reserva direta</span>
           <h2 style="margin-top:14px">Reserve direto com a Noemi e pague menos.</h2>
           <p>Sem taxa de plataforma, sem intermediário: o valor fica mais baixo para você e o atendimento é direto com quem vai te receber.</p>
-          <button class="btn btn-p" style="margin-top:26px" data-route="reservar">Ver datas disponíveis →</button>
+          <button class="btn btn-p" style="margin-top:26px" data-book>Ver datas disponíveis →</button>
         </div>
         <ul>
           <li>💸 Até 15% mais barato que nas plataformas</li>
@@ -547,7 +548,7 @@ tr:hover td{background:#FBFBF8}
 
   <footer class="ft">
     <div class="wrap">
-      <div class="logo"><div class="logo-mark">A</div><div><b>Alternativa</b><small>Hospedagem domiciliar · BC</small></div></div>
+      <div class="logo"><svg viewBox="0 0 40 40" width="38" height="38" aria-hidden="true"><use href="#logo-mark"/></svg><div><b>Alternativa</b><small>Hospedagem domiciliar · BC</small></div></div>
       <div>Rua 2800 · Centro<br>Balneário Camboriú — SC, 88330-370</div>
       <div>WhatsApp: <span id="ftWa"></span><br>Site e sistema de reservas por <b>Alienhub</b> · alienhub.dev</div>
     </div>
@@ -564,7 +565,7 @@ tr:hover td{background:#FBFBF8}
 <!-- ================= RESERVAS ================= -->
 <div id="v-reservar" class="view">
   <div class="bk-top"><div class="wrap">
-    <button class="logo" data-route="site"><div class="logo-mark">A</div><div style="text-align:left"><b>Alternativa</b><small>Reserva direta</small></div></button>
+    <button class="logo" data-route="site"><svg viewBox="0 0 40 40" width="38" height="38" aria-hidden="true"><use href="#logo-mark"/></svg><div style="text-align:left"><b>Alternativa</b><small>Reserva direta</small></div></button>
     <div class="steps" id="steps"></div>
   </div></div>
   <div class="bk">
@@ -577,7 +578,7 @@ tr:hover td{background:#FBFBF8}
 <div id="v-painel" class="view">
   <div class="adm">
     <aside class="side">
-      <div class="logo"><div class="logo-mark">A</div><div><b style="color:#fff">Alternativa</b><small>Painel da anfitriã</small></div></div>
+      <div class="logo"><svg viewBox="0 0 40 40" width="38" height="38" aria-hidden="true"><use href="#logo-mark"/></svg><div><b style="color:#fff">Alternativa</b><small>Painel da anfitriã</small></div></div>
       <nav id="admNav">
         <button data-tab="geral" class="on">◧ Visão geral</button>
         <button data-tab="cal">▦ Calendário</button>
@@ -666,6 +667,7 @@ function route(){
 }
 document.addEventListener('click',e=>{
   const r=e.target.closest('[data-route]'); if(r){e.preventDefault();location.hash=r.dataset.route}
+  const bk=e.target.closest('[data-book]'); if(bk){e.preventDefault();startBooking()}
   const g=e.target.closest('[data-go]'); if(g){document.getElementById(g.dataset.go).scrollIntoView({behavior:'smooth'})}
 });
 window.addEventListener('hashchange',route);
@@ -679,18 +681,27 @@ function renderSite(){
       <h3>${r.name}</h3><p style="color:var(--ink2)">${r.desc}</p>
       <div class="chips">${r.am.map(a=>`<span class="chip">${a}</span>`).join('')}</div>
       <div class="foot"><div class="price"><small>a partir de</small><b>${brl(r.price)}</b><s>${brl(r.price*1.15)}</s> <small style="display:inline">/noite · reserva direta</small></div>
-      <button class="btn btn-s btn-sm" onclick="BK.room='${r.id}';location.hash='reservar'">Reservar</button></div>
+      <button class="btn btn-s btn-sm" onclick="startBooking('${r.id}')">Reservar</button></div>
     </div></article>`).join('');
   $('#faqTimes').textContent=`Check-in a partir das ${DB.cfg.ci} e check-out até as ${DB.cfg.co}. Chegando em outro horário? É só avisar a Noemi pelo WhatsApp.`;
   $('#faqPay').textContent=`Na reserva direta você paga ${DB.cfg.dep}% de sinal via Pix ou cartão para garantir as datas e o restante no check-in. ${DB.cfg.cancel}`;
   $('#ftWa').textContent=DB.cfg.wa;
   observe();
 }
-const ci0=iso(addD(TODAY,14)),co0=iso(addD(TODAY,17));
+// Datas sugeridas: primeira janela de 3 noites (a partir de 7 dias) com todos os quartos livres.
+let d0=7;while(d0<120&&!DB.rooms.filter(r=>r.on).every(r=>freeRoom(r.id,iso(addD(TODAY,d0)),iso(addD(TODAY,d0+3)))))d0++;
+const ci0=iso(addD(TODAY,d0)),co0=iso(addD(TODAY,d0+3));
 $('#hCi').value=ci0;$('#hCo').value=co0;$('#hCi').min=T;$('#hCo').min=T;
-$('#heroForm').addEventListener('submit',e=>{e.preventDefault();const a=$('#hCi').value,b=$('#hCo').value;
-  if(!a||!b||b<=a){toast('Escolha um check-out depois do check-in');return}
-  Object.assign(BK,{ci:a,co:b,ad:+$('#hG').value,ch:0,step:2,room:null});location.hash='reservar'});
+/* Entra no motor de reservas já com as datas do formulário do hero, pulando direto para o quarto (ou dados, se o quarto já foi escolhido). */
+function startBooking(room=null){
+  const a=$('#hCi').value,b=$('#hCo').value;
+  if(!a||!b||b<=a||a<T){toast('Escolha um check-out depois do check-in');return}
+  const ok=room&&freeRoom(room,a,b);
+  Object.assign(BK,{ci:a,co:b,ad:+$('#hG').value,ch:0,room:ok?room:null,step:ok?3:2,done:null});
+  if(room&&!ok)toast('Quarto indisponível nessas datas — escolha outro');
+  location.hash='reservar';
+}
+$('#heroForm').addEventListener('submit',e=>{e.preventDefault();startBooking()});
 addEventListener('scroll',()=>$('#nav').classList.toggle('sc',scrollY>10));
 $('#waBtn').onclick=()=>$('#waPop').classList.toggle('on');
 let io;function observe(){io=io||new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});$$('.rv:not(.in)').forEach(e=>io.observe(e))}
